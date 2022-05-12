@@ -1,0 +1,8 @@
+# IDEs and editors
+/.idea
+.project
+
+# Projects files and directiries
+/venv
+__pycache__
+.env
