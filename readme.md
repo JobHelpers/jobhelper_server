@@ -1,4 +1,5 @@
 ### Project init
+- py -m pip install --user virtualenv
 - https://flask.palletsprojects.com/en/2.1.x/installation/
 - py -3 -m venv venv
 - venv\Scripts\activate
