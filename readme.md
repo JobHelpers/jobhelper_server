@@ -6,7 +6,7 @@
 
 ---
 
-### Must to read
+### Must read
 - https://flask.palletsprojects.com/en/2.1.x/
 - https://flask.palletsprojects.com/en/2.1.x/blueprints/
 - https://flask-sqlalchemy.palletsprojects.com/en/2.x/
