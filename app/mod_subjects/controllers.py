@@ -1,6 +1,5 @@
-from flask import Blueprint, jsonify, request
+from flask import Blueprint, jsonify
 
-from app import db, utils
 from app.mod_subjects.models import Subjects
 
 mod_subjects = Blueprint('subjects', __name__, url_prefix='/subjects')
