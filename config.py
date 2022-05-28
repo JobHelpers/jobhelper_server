@@ -10,7 +10,7 @@ DEBUG = True
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
 # Define the database - we are working with
-SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URL")
+SQLALCHEMY_DATABASE_URI = os.getenv("DATABASE_URI")
 DATABASE_CONNECT_OPTIONS = {}
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 
