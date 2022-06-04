@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify
-
 from app.mod_cities.models import Cities
 
 mod_cities = Blueprint('cities', __name__, url_prefix='/cities')
