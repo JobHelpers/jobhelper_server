@@ -1,9 +1,10 @@
 from app import db
+from sqlalchemy import ForeignKey
 
-class Collaborator(db.Model):
+
+class University(db.Model):
     __tablename__ = 'universities'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.tinytext, unique=False, nullable=False)
-    city_id = db.Column(db.Integer, unique=True, nullable=False)
-    parent = db.Column(db.Integer, nullable=False)
-    children = relationship("cities")
+    city_id = db.Column(db.Integer, unique=True, nullable=False, ForeignKey('cities.id'))
+
