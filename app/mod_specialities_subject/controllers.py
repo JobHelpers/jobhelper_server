@@ -5,7 +5,7 @@ from app.mod_specialities_subject.models import Speciality_subject
 
 mod_specialities_subject = Blueprint('specialities_subject', __name__, url_prefix='/specialities_subject')
 
-@mod_specialities_subject.route('/specialities_subject_all', methods=['GET'])
+@mod_specialities_subject.route('/specialities/subject', methods=['GET'])
 def findAll():
 
     specialities_subject = [{
@@ -17,7 +17,7 @@ def findAll():
 
     return jsonify(specialities_subject)
 
-@mod_specialities_subject.route('/specialities_subject', methods=['GET'])
+@mod_specialities_subject.route('/specialities/grouped_subject', methods=['GET'])
 def findSpec():
 
      query = db.session.execute('SELECT t1.speciality_code, t1.subject_status, array_to_string(array_agg(t2.subject_id), ',') AS subject_ids\
@@ -32,7 +32,5 @@ def findSpec():
           'subject_status': row.subject_status,
           'subject_ids': row.subject_ids
      } for row in query]
-
-     print(data)
 
      return jsonify(data)
