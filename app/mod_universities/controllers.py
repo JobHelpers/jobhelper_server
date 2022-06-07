@@ -5,9 +5,9 @@ from app.mod_universities.models import University
 
 mod_universities = Blueprint('University', name, url_prefix='/universities')
 
+
 @mod_universities.route('/universities', methods=['GET'])
 def findUniversities():
-
     speciality_code = request.args.get('speciality_code')
     city_id = request.args.get('city_id')
 
