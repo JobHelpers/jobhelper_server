@@ -9,11 +9,14 @@ mod_faculties = Blueprint('faculties', __name__, url_prefix='/faculties')
 
 @mod_faculties.route('/faculties', methods=['GET'])
 def show_faculties():
-    university_id = request.args.get('university_id')
-    speciality_code = request.args.get('speciality_code')
+    university_id = request.args.get('university')
+    speciality_code = request.args.get('speciality')
 
-    result = db.Query(Faculties).filter(and_(Faculties.university_id == university_id,
-                                             Faculties.speciality_code == speciality_code)).all()
+    result = Faculties\
+        .query\
+        .filter(and_(Faculties.university_id == university_id,
+                     Faculties.speciality_code == speciality_code))\
+        .all()
 
     data = [{
         'id': row.id,
