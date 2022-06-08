@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify
-
 from app.mod_specialities.models import Speciality
 
 mod_specialities = Blueprint('specialities', __name__, url_prefix='/specialities')

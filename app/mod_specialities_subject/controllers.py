@@ -1,5 +1,4 @@
 from flask import Blueprint, jsonify
-
 from app import db
 from app.mod_specialities_subject.models import Speciality_subject
 

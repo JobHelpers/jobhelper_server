@@ -1,7 +1,5 @@
 from flask import Blueprint, jsonify, request
-
 from app import db
-from app.mod_universities.models import University
 
 mod_universities = Blueprint('University', __name__, url_prefix='/universities')
 
@@ -17,9 +15,9 @@ def findUniversities():
                                 AND faculties.speciality_code='{speciality_code}'\
                                 GROUP BY universities.id").all()
     data = [{
-        'id ': row.id,
+        'id': row.id,
         'name': row.name,
-        ' city_id': row.city_id
+        'city_id': row.city_id
     } for row in query]
 
     return jsonify(data)

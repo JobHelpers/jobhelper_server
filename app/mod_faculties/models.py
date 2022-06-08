@@ -1,7 +1,5 @@
 from sqlalchemy import ForeignKey
-
 from app import db
-
 
 class Faculties(db.Model):
     __tablename__ = 'faculties'

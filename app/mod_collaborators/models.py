@@ -6,9 +6,3 @@ class Collaborator(db.Model):
     name = db.Column(db.String(255), unique=False, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     role = db.Column(db.String(120), nullable=False)
-
-    def __init__(self, **kwargs):
-        super(Collaborator, self).__init__(**kwargs)
-
-    def __repr__(self):
-        return '<User %r>' % self.name

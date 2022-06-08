@@ -1,11 +1,8 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import and_
-
-from app import db
 from app.mod_faculties.models import Faculties
 
 mod_faculties = Blueprint('faculties', __name__, url_prefix='/faculties')
-
 
 @mod_faculties.route('/faculties', methods=['GET'])
 def show_faculties():
