@@ -17,6 +17,7 @@ from app.mod_subjects.controllers import mod_subjects
 from app.mod_faculties.controllers import mod_faculties
 from app.mod_universities.controllers import mod_universities
 from app.mod_coefficients.controllers import mod_coefficients
+from app.mod_max_min_grades.controllers import mod_max_min_grades
 
 # Register blueprint(s)
 app.register_blueprint(mod_collaborators, url_prefix='/api')
@@ -27,5 +28,6 @@ app.register_blueprint(mod_faculties, url_prefix='/api')
 app.register_blueprint(mod_universities, url_prefix='/api')
 app.register_blueprint(mod_cities, url_prefix='/api')
 app.register_blueprint(mod_coefficients, url_prefix='/api')
+app.register_blueprint(mod_max_min_grades, url_prefix='/api')
 
 db.create_all()
