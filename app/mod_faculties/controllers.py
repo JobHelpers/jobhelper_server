@@ -51,7 +51,7 @@ def faculties_grades():
         'universityName': row.university_name,
         'shortDescription': row.short_description,
         'url': row.url,
-        'coofecients': getCoefficientsByFaculty(row.id),
+        'coefficients': getCoefficientsByFaculty(row.id),
         'maxMinGrade': getMaxMinGradesByFaculty(row.id)
     } for row in results]
     return jsonify([data])
