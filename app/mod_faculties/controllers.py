@@ -33,7 +33,6 @@ def show_faculties():
 @mod_faculties.route('/faculties/grades', methods=['GET'])
 def faculties_grades():
     university_id = request.args.getlist('universityId')
-    speciality_code = request.args.getlist('specialityCode')
 
     query = f"SELECT faculties.*, universities.name AS university_name \
             FROM faculties \
