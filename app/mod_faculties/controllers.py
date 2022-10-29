@@ -8,15 +8,16 @@ from app.mod_max_min_grades.controllers import getMaxMinGradesByFaculty
 
 mod_faculties = Blueprint('faculties', __name__, url_prefix='/faculties')
 
+
 @mod_faculties.route('/faculties', methods=['GET'])
 def show_faculties():
     university_id = request.args.get('university')
     speciality_code = request.args.get('speciality')
 
-    result = Faculties\
-        .query\
+    result = Faculties \
+        .query \
         .filter(and_(Faculties.university_id == university_id,
-                     Faculties.speciality_code == speciality_code))\
+                     Faculties.speciality_code == speciality_code)) \
         .all()
 
     data = [{
@@ -30,14 +31,20 @@ def show_faculties():
 
     return jsonify(data)
 
+
 @mod_faculties.route('/faculties/grades', methods=['GET'])
 def faculties_grades():
-    university_id = request.args.getlist('universityId')
+    print(request.args.getlist('universityId'))
 
+    university_id = request.args.getlist('universityId')
+    list_count = len(university_id)
+    print(list_count)
+
+    where_clause = tuple(university_id) if list_count > 1 else f'({university_id[0]})'
     query = f"SELECT faculties.*, universities.name AS university_name \
             FROM faculties \
             INNER JOIN universities ON faculties.university_id=universities.id \
-            WHERE university_id IN {tuple(university_id)} "
+            WHERE university_id IN {where_clause}"
 
     results = db.session.execute(
         query
