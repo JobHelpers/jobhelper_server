@@ -1,6 +1,10 @@
 from flask import Blueprint, jsonify, request
 from sqlalchemy import and_
+
+from app import db
 from app.mod_faculties.models import Faculties
+from app.mod_coefficients.controllers import getCoefficientsByFaculty
+from app.mod_max_min_grades.controllers import getMaxMinGradesByFaculty
 
 mod_faculties = Blueprint('faculties', __name__, url_prefix='/faculties')
 
@@ -25,3 +29,29 @@ def show_faculties():
     } for row in result]
 
     return jsonify(data)
+
+@mod_faculties.route('/faculties/grades', methods=['GET'])
+def faculties_grades():
+    university_id = request.args.getlist('universityId')
+
+    query = f"SELECT faculties.*, universities.name AS university_name \
+            FROM faculties \
+            INNER JOIN universities ON faculties.university_id=universities.id \
+            WHERE university_id IN {tuple(university_id)} "
+
+    results = db.session.execute(
+        query
+    ).all()
+
+    data = [{
+        'id': row.id,
+        'name': row.name,
+        'specialityCode': row.speciality_code,
+        'universityId': row.university_id,
+        'universityName': row.university_name,
+        'shortDescription': row.short_description,
+        'url': row.url,
+        'coefficients': getCoefficientsByFaculty(row.id),
+        'maxMinGrade': getMaxMinGradesByFaculty(row.id)
+    } for row in results]
+    return jsonify([data])
