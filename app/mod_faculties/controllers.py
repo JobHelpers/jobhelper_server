@@ -34,17 +34,16 @@ def show_faculties():
 
 @mod_faculties.route('/faculties/grades', methods=['GET'])
 def faculties_grades():
-    print(request.args.getlist('universityId'))
 
     university_id = request.args.getlist('universityId')
+    speciality_code = request.args.get('specialityCode')
     list_count = len(university_id)
-    print(list_count)
 
     where_clause = tuple(university_id) if list_count > 1 else f'({university_id[0]})'
     query = f"SELECT faculties.*, universities.name AS university_name \
             FROM faculties \
             INNER JOIN universities ON faculties.university_id=universities.id \
-            WHERE university_id IN {where_clause}"
+            WHERE university_id IN {where_clause} AND speciality_code = '{speciality_code}'"
 
     results = db.session.execute(
         query
