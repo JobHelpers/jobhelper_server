@@ -31,11 +31,3 @@ app.register_blueprint(mod_coefficients, url_prefix='/api')
 app.register_blueprint(mod_max_min_grades, url_prefix='/api')
 
 db.create_all()
-db.session.execute(f"  \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (1, 'Stanislav Denysenko', 'lohopusik67@gmail.com', 'Frontend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (2, 'Vitaliy Sevastyanov', 'vetal.sevastyanov@gmail.com', 'Frontend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (3, 'Nazar Bylen', 'nazar.bylen.ir.2021@lpnu.ua', 'Backend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (4, 'Orest Borshovskiy', 'oborshovskiy@gmail.com', 'Backend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (5, 'Ihor Patko', 'patkoihor2004@gmail.com', 'Backend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (6, 'Maksym Morochenets', 'maksmorroo@gmail.com', 'Backend dev'); \
-INSERT INTO public.collaborators (id, name, email, role) VALUES (7, 'Ihor Byra', 'ihorbyra@gmail.com', 'Mentor');")
