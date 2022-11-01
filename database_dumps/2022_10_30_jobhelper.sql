@@ -1,39 +1,3 @@
-INSERT INTO public.cities (id, name) VALUES (1, 'Львів');
-INSERT INTO public.cities (id, name) VALUES (2, 'Київ');
-
-
---
--- TOC entry 3401 (class 0 OID 16808)
--- Dependencies: 224
--- Data for Name: coefficients; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (2, 0.35, 130, 1, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (3, 0.4, 145, 14, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (4, 0.25, 130, 3, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (5, 0.25, 130, 6, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (6, 0.25, 130, 18, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (7, 0.25, 130, 19, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (8, 0.25, 130, 21, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (9, 0.25, 130, 22, 826173);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (10, 0.2, 100, 29, 810096);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (11, 0.2, 115, 14, 810096);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (12, 0.6, 124, 999, 810096);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (13, 0.35, 100, 1, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (14, 0.4, 115, 14, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (15, 0.25, 100, 3, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (16, 0.25, 100, 6, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (17, 0.25, 100, 18, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (18, 0.25, 100, 19, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (19, 0.25, 100, 21, 833553);
-INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (20, 0.25, 100, 22, 833553);
-
-
---
--- TOC entry 3388 (class 0 OID 16711)
--- Dependencies: 211
--- Data for Name: collaborators; Type: TABLE DATA; Schema: public; Owner: postgres
---
 
 INSERT INTO public.collaborators (id, name, email, role) VALUES (1, 'Stanislav Denysenko', 'lohopusik67@gmail.com', 'Frontend dev');
 INSERT INTO public.collaborators (id, name, email, role) VALUES (2, 'Vitaliy Sevastyanov', 'vetal.sevastyanov@gmail.com', 'Frontend dev');
@@ -43,88 +7,28 @@ INSERT INTO public.collaborators (id, name, email, role) VALUES (5, 'Ihor Patko'
 INSERT INTO public.collaborators (id, name, email, role) VALUES (6, 'Maksym Morochenets', 'maksmorroo@gmail.com', 'Backend dev');
 INSERT INTO public.collaborators (id, name, email, role) VALUES (7, 'Ihor Byra', 'ihorbyra@gmail.com', 'Mentor');
 
+INSERT INTO public.cities (id, name) VALUES (1, 'Львів');
+INSERT INTO public.cities (id, name) VALUES (2, 'Київ');
 
---
--- TOC entry 3390 (class 0 OID 16715)
--- Dependencies: 213
--- Data for Name: faculties; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (826173, 'Інститут комп''ютерних технологій, автоматики та метрології', 97, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (826494, 'Факультет міжнародних економічних відносин та інформаційних технологій', 16, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833553, 'Інститут комп''ютерних технологій, автоматики та метрології', 97, '125', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (834453, 'Інститут комп''ютерних наук та інформаційних технологій', 97, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (835497, 'Факультет прикладної математики та інформатики', 282, '125', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (842107, 'Факультет прикладної математики та інформатики', 282, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (842578, 'Факультет електроніки та комп`ютерних технологій', 282, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855074, 'Інститут деревообробних та комп''ютерних технологій і дизайну', 160, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856008, 'Факультет видавничо-поліграфічних та інформаційних технологій', 167, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (860317, 'Факультет прикладних наук', 244, '122', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (869029, 'Філософський факультет', 282, '033', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (810096, 'Інститут архітектури та дизайну', 97, '022', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855732, 'Інститут економіки і менеджменту', 97, '075', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833097, '
-Інститут права, психології та інноваційної освіти', 97, '061', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856581, 'Інститут економіки і менеджменту', 97, '051', '', '');
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856624, 'Інститут економіки і менеджменту', 97, '073', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (827395, 'Інститут права, психології та інноваційної освіти', 97, '053', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (877889, '
-Інститут гуманітарних та соціальних наук', 97, '054', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (838766, 'Інститут геодезії', 97, '103', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855964, 'Інститут комп''ютерних наук та інформаційних технологій', 97, '124', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (836893, 'Інститут телекомунікацій, радіоелектроніки та електронної техніки', 97, '171', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (853127, '
-Інститут хімії та хімічних технологій', 97, '181', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856872, 'Інститут будівництва та інженерних систем', 97, '192', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833638, 'Інститут гуманітарних та соціальних наук', 97, '291', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851657, 'Інститут прикладної математики та фундаментальних наук', 97, '291', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856873, 'Інститут механічної інженерії та транспорту', 97, '274', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (828804, 'Інститут сталого розвитку імені В`ячеслава', 97, '242', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (883189, 'Інститут прикладної математики та фундаментальних наук', 97, '113', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (857860, 'Інститут права, психології та інноваційної освіти', 97, '081', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (861629, 'Інститут адміністрування та післядипломної освіти', 97, '281', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851933, 'Економічний факультет', 282, '073', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851995, 'Факультет міжнародних відносин', 282, '292', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (839187, 'Географічний факультет', 282, '181', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (853825, 'Філософський факультет', 282, '053', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (924217, '
-Факультет електроніки та комп`ютерних технологій', 282, '171', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (857382, 'Факультет педагогічної освіти', 282, '231', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (828645, 'Факультет прикладної математики та інформатики', 282, '113', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (852793, '
-Історичний факультет', 282, '032', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (861425, '
-Факультет міжнародних економічних відносин та інформаційних технологій', 16, '292', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (892873, 'Факультет товарознавства, управління та сфери обслуговування', 16, '181', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (849976, 'Навчально-науковий інститут журналістики', 41, '061', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (846210, '
-Історичний факультет', 41, '032', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851759, 'Географічний факультет', 41, '242', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (839896, 'Навчально-науковий інститут міжнародних відносин', 41, '293', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (816072, 'Навчально-науковий інститут філології', 41, '035', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851193, 'Навчально-науковий інститут права', 41, '081', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (864837, 'Філософський факультет', 41, '033', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (814348, 'Навчально-науковий інститут філології', 41, '014', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (815450, 'Філософський факультет', 41, '031', NULL, NULL);
-INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (862064, 'Факультет психології', 41, '231', NULL, NULL);
+INSERT INTO public.subjects (id, name) VALUES (1, 'Українська мова');
+INSERT INTO public.subjects (id, name) VALUES (3, 'Іноземні мови');
+INSERT INTO public.subjects (id, name) VALUES (6, 'Істроія України');
+INSERT INTO public.subjects (id, name) VALUES (14, 'Математика');
+INSERT INTO public.subjects (id, name) VALUES (18, 'Біологія');
+INSERT INTO public.subjects (id, name) VALUES (19, 'Географія');
+INSERT INTO public.subjects (id, name) VALUES (21, 'Фізика');
+INSERT INTO public.subjects (id, name) VALUES (22, 'Хімія');
+INSERT INTO public.subjects (id, name) VALUES (29, 'Українська мова та література');
+INSERT INTO public.subjects (id, name) VALUES (999, 'Творчий конкурс');
 
 
---
--- TOC entry 3403 (class 0 OID 24610)
--- Dependencies: 226
--- Data for Name: max_min_grades; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (1, 2021, 826173, '122', 193.443, 151.062);
-INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (2, 2021, 810096, '022', 180.234, 136.68);
-INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (9, 2021, 833553, '125', 185.283, 123.063);
-
-
---
--- TOC entry 3392 (class 0 OID 16721)
--- Dependencies: 215
--- Data for Name: specialities; Type: TABLE DATA; Schema: public; Owner: postgres
---
+INSERT INTO public.universities (id, name, city_id) VALUES (16, 'Львівський торговельно-економічний університет', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (97, 'Національний університет "Львівська політехніка"', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (160, 'Державний вищий навчальний заклад "Національний лісотехнічний університет України"', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (167, 'Українська академія друкарства', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (244, 'Заклад вищої освіти "Український католицький університет"', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (282, 'Львівський національний університет імені Івана Франка', 1);
+INSERT INTO public.universities (id, name, city_id) VALUES (41, 'Київський національний університет імені Тараса Шевченка', 2);
 
 INSERT INTO public.specialities (id, code, name, parent) VALUES (1, '011', 'Освітні, педагогічні науки', 0);
 INSERT INTO public.specialities (id, code, name, parent) VALUES (2, '014', 'Середня освіта', 0);
@@ -303,11 +207,94 @@ INSERT INTO public.specialities (id, code, name, parent) VALUES (174, '014.027',
 INSERT INTO public.specialities (id, code, name, parent) VALUES (175, '014.029', 'Інші мови (із зазначенням мови)', 0);
 
 
---
--- TOC entry 3394 (class 0 OID 16727)
--- Dependencies: 217
--- Data for Name: specialities_subjects; Type: TABLE DATA; Schema: public; Owner: postgres
---
+
+
+--------------------------------------
+
+
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (826173, 'Інститут комп''ютерних технологій, автоматики та метрології', 97, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (826494, 'Факультет міжнародних економічних відносин та інформаційних технологій', 16, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833553, 'Інститут комп''ютерних технологій, автоматики та метрології', 97, '125', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (834453, 'Інститут комп''ютерних наук та інформаційних технологій', 97, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (835497, 'Факультет прикладної математики та інформатики', 282, '125', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (842107, 'Факультет прикладної математики та інформатики', 282, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (842578, 'Факультет електроніки та комп`ютерних технологій', 282, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855074, 'Інститут деревообробних та комп''ютерних технологій і дизайну', 160, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856008, 'Факультет видавничо-поліграфічних та інформаційних технологій', 167, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (860317, 'Факультет прикладних наук', 244, '122', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (869029, 'Філософський факультет', 282, '033', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (810096, 'Інститут архітектури та дизайну', 97, '022', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855732, 'Інститут економіки і менеджменту', 97, '075', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833097, '
+Інститут права, психології та інноваційної освіти', 97, '061', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856581, 'Інститут економіки і менеджменту', 97, '051', '', '');
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856624, 'Інститут економіки і менеджменту', 97, '073', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (827395, 'Інститут права, психології та інноваційної освіти', 97, '053', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (877889, '
+Інститут гуманітарних та соціальних наук', 97, '054', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (838766, 'Інститут геодезії', 97, '103', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (855964, 'Інститут комп''ютерних наук та інформаційних технологій', 97, '124', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (836893, 'Інститут телекомунікацій, радіоелектроніки та електронної техніки', 97, '171', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (853127, '
+Інститут хімії та хімічних технологій', 97, '181', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856872, 'Інститут будівництва та інженерних систем', 97, '192', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (833638, 'Інститут гуманітарних та соціальних наук', 97, '291', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851657, 'Інститут прикладної математики та фундаментальних наук', 97, '291', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (856873, 'Інститут механічної інженерії та транспорту', 97, '274', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (828804, 'Інститут сталого розвитку імені В`ячеслава', 97, '242', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (883189, 'Інститут прикладної математики та фундаментальних наук', 97, '113', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (857860, 'Інститут права, психології та інноваційної освіти', 97, '081', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (861629, 'Інститут адміністрування та післядипломної освіти', 97, '281', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851933, 'Економічний факультет', 282, '073', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851995, 'Факультет міжнародних відносин', 282, '292', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (839187, 'Географічний факультет', 282, '181', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (853825, 'Філософський факультет', 282, '053', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (924217, '
+Факультет електроніки та комп`ютерних технологій', 282, '171', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (857382, 'Факультет педагогічної освіти', 282, '231', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (828645, 'Факультет прикладної математики та інформатики', 282, '113', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (852793, '
+Історичний факультет', 282, '032', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (861425, '
+Факультет міжнародних економічних відносин та інформаційних технологій', 16, '292', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (892873, 'Факультет товарознавства, управління та сфери обслуговування', 16, '181', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (849976, 'Навчально-науковий інститут журналістики', 41, '061', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (846210, '
+Історичний факультет', 41, '032', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851759, 'Географічний факультет', 41, '242', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (839896, 'Навчально-науковий інститут міжнародних відносин', 41, '293', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (816072, 'Навчально-науковий інститут філології', 41, '035', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (851193, 'Навчально-науковий інститут права', 41, '081', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (864837, 'Філософський факультет', 41, '033', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (814348, 'Навчально-науковий інститут філології', 41, '014', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (815450, 'Філософський факультет', 41, '031', NULL, NULL);
+INSERT INTO public.faculties (id, name, university_id, speciality_code, short_description, url) VALUES (862064, 'Факультет психології', 41, '231', NULL, NULL);
+
+
+
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (2, 0.35, 130, 1, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (3, 0.4, 145, 14, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (4, 0.25, 130, 3, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (5, 0.25, 130, 6, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (6, 0.25, 130, 18, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (7, 0.25, 130, 19, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (8, 0.25, 130, 21, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (9, 0.25, 130, 22, 826173);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (10, 0.2, 100, 29, 810096);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (11, 0.2, 115, 14, 810096);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (12, 0.6, 124, 999, 810096);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (13, 0.35, 100, 1, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (14, 0.4, 115, 14, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (15, 0.25, 100, 3, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (16, 0.25, 100, 6, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (17, 0.25, 100, 18, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (18, 0.25, 100, 19, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (19, 0.25, 100, 21, 833553);
+INSERT INTO public.coefficients (id, coefficient, min_grade, subject_id, faculty_id) VALUES (20, 0.25, 100, 22, 833553);
+
+INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (1, 2021, 826173, '122', 193.443, 151.062);
+INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (2, 2021, 810096, '022', 180.234, 136.68);
+INSERT INTO public.max_min_grades (id, year, faculty_id, speciality_code, max_min_budget, max_min_contract) VALUES (9, 2021, 833553, '125', 185.283, 123.063);
 
 INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subject_status) VALUES (1, '011', 29, 'main');
 INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subject_status) VALUES (2, '011', 6, 'mandatory');
@@ -1347,39 +1334,6 @@ INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subje
 INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subject_status) VALUES (1036, '293', 3, 'mandatory');
 INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subject_status) VALUES (1037, '293', 6, 'optional');
 INSERT INTO public.specialities_subjects (id, speciality_code, subject_id, subject_status) VALUES (1038, '293', 14, 'optional');
-
-
---
--- TOC entry 3396 (class 0 OID 16731)
--- Dependencies: 219
--- Data for Name: subjects; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.subjects (id, name) VALUES (1, 'Українська мова');
-INSERT INTO public.subjects (id, name) VALUES (3, 'Іноземні мови');
-INSERT INTO public.subjects (id, name) VALUES (6, 'Істроія України');
-INSERT INTO public.subjects (id, name) VALUES (14, 'Математика');
-INSERT INTO public.subjects (id, name) VALUES (18, 'Біологія');
-INSERT INTO public.subjects (id, name) VALUES (19, 'Географія');
-INSERT INTO public.subjects (id, name) VALUES (21, 'Фізика');
-INSERT INTO public.subjects (id, name) VALUES (22, 'Хімія');
-INSERT INTO public.subjects (id, name) VALUES (29, 'Українська мова та література');
-INSERT INTO public.subjects (id, name) VALUES (999, 'Творчий конкурс');
-
-
---
--- TOC entry 3398 (class 0 OID 16735)
--- Dependencies: 221
--- Data for Name: universities; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO public.universities (id, name, city_id) VALUES (16, 'Львівський торговельно-економічний університет', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (97, 'Національний університет "Львівська політехніка"', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (160, 'Державний вищий навчальний заклад "Національний лісотехнічний університет України"', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (167, 'Українська академія друкарства', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (244, 'Заклад вищої освіти "Український католицький університет"', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (282, 'Львівський національний університет імені Івана Франка', 1);
-INSERT INTO public.universities (id, name, city_id) VALUES (41, 'Київський національний університет імені Тараса Шевченка', 2);
 
 
 --
