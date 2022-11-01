@@ -7,5 +7,5 @@ class Faculties(db.Model):
     name = db.Column(db.Text, nullable=False, unique=False)
     university_id = db.Column(db.Integer, ForeignKey('universities.id'), unique=False)
     speciality_code = db.Column(db.String(100), ForeignKey('specialities.code'), unique=False)
-    short_description = db.Column(db.Text, unique=False, nullable=False)
-    url = db.Column(db.Text, unique=False, nullable=False)
+    short_description = db.Column(db.Text, unique=False, nullable=True)
+    url = db.Column(db.Text, unique=False, nullable=True)
