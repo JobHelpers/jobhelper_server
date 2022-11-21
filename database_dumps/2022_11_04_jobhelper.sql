@@ -12,7 +12,7 @@ INSERT INTO public.cities (id, name) VALUES (2, 'Київ');
 
 INSERT INTO public.subjects (id, name) VALUES (1, 'Українська мова');
 INSERT INTO public.subjects (id, name) VALUES (3, 'Іноземні мови');
-INSERT INTO public.subjects (id, name) VALUES (6, 'Істроія України');
+INSERT INTO public.subjects (id, name) VALUES (6, 'Історія України');
 INSERT INTO public.subjects (id, name) VALUES (14, 'Математика');
 INSERT INTO public.subjects (id, name) VALUES (18, 'Біологія');
 INSERT INTO public.subjects (id, name) VALUES (19, 'Географія');
