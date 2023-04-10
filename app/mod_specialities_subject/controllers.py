@@ -19,12 +19,12 @@ def findAll():
 @mod_specialities_subject.route('/specialities/grouped_subjects', methods=['GET'])
 def findSpec():
 
-     query = db.session.execute("SELECT t1.speciality_code, t1.subject_status, array_to_string(array_agg(t2.subject_id), ',') AS subject_ids\
-              FROM specialities_subjects t1\
-              INNER JOIN specialities_subjects t2\
-              ON t2.id=t1.id\
-              GROUP BY t1.speciality_code, t1.subject_status\
-              ORDER BY t1.speciality_code, t1.subject_status").all()
+     query = db.session.execute("SELECT t1.speciality_code, t1.subject_status, GROUP_CONCAT(DISTINCT t2.subject_id ORDER BY t2.subject_id SEPARATOR ',') AS subject_ids\
+        FROM specialities_subjects t1\
+        INNER JOIN specialities_subjects t2\
+        ON t2.id=t1.id\
+        GROUP BY t1.speciality_code, t1.subject_status\
+        ORDER BY t1.speciality_code, t1.subject_status").all()
 
      data = [{
           'speciality_code': row.speciality_code,
