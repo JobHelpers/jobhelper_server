@@ -61,3 +61,28 @@ def faculties_grades():
         'maxMinGrade': getMaxMinGradesByFaculty(row.id)
     } for row in results]
     return jsonify([data])
+
+@mod_faculties.route('/faculty/<faculty_id>/grades', methods=['GET'])
+def faculty_grades(faculty_id):
+    query = f"SELECT faculties.*, universities.name AS university_name \
+            FROM faculties \
+            INNER JOIN universities ON faculties.university_id=universities.id \
+            WHERE faculties.id = '{faculty_id}'"
+
+    results = db.session.execute(
+        query
+    ).all()
+
+    data = [{
+        'id': row.id,
+        'name': row.name,
+        'specialityCode': row.speciality_code,
+        'universityId': row.university_id,
+        'universityName': row.university_name,
+        'shortDescription': row.short_description,
+        'url': row.url,
+        'coefficients': getCoefficientsByFaculty(row.id),
+        'maxMinGrade': getMaxMinGradesByFaculty(row.id)
+    } for row in results]
+
+    return jsonify(data)
